@@ -29,12 +29,12 @@ async def generate_post(request: PostRequest):
     try:
         post_type = request.type
         post_value = request.value
-        
+    
         # Generate the post content
-        response = await linked_in_post_generator.generate(post_type, post_value)
-        
+        generated_posts = await linked_in_post_generator.generate(post_type, post_value)
+
         # Return the generated post
-        return response
+        return {"posts": generated_posts}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 

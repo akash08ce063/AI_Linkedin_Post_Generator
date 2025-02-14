@@ -4,6 +4,7 @@ import { History } from './components/History';
 import { GenerationHistory } from './types';
 import { Sparkles, PanelLeftClose, PanelLeft } from 'lucide-react';
 import { generatePosts } from './api';
+import { PostCard } from './components/PostCard';
 
 function App() {
   const [history, setHistory] = useState<GenerationHistory[]>([]);

@@ -1,3 +1,6 @@
+import { ApiResponse } from './types';
+import { Post } from './types';
+
 const API_URL = 'http://localhost:8000';
 
 export async function generatePosts(type: 'links' | 'topic' | 'content', value: string): Promise<Post[]> {
